@@ -1,0 +1,99 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #1d2023;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+    min-height: 100vh;
+}
+h2{
+    color: #fff;
+    font-size: 40px;
+}
+@media (min-width: 767px) {
+    .container h2{
+        font-size: 75px;
+    }
+}
+.prompt{
+    background-color: #292c31;
+    padding: 5px;
+    width: 620px;
+    border: 3px solid #36383d;
+    border-radius: 10px;
+}
+input,button{
+    padding: 10px;
+    border: none;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 7px;
+    transition: 0.4s;
+}
+input{
+    background-color: inherit;
+    caret-color: #808285;
+    width: 75%;
+    outline: none;
+}
+input:focus{
+    background-color: #2f3236;
+}
+button{
+    width: 24%;
+    color: #fff;
+    background-color: #36383d;
+    cursor: pointer;
+}
+button:hover{
+    background-color: #45464a;
+}
+.images{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+@media (min-width: 767px) {
+    .container .images{
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        flex-direction: column;
+        margin-bottom: 30px;
+    }
+    .container .images div{
+        height: 550px;
+        width: 550px;
+    }
+    .container .prompt{
+        width: 850px;
+        height: 100px;
+        margin-bottom: 130px;
+    }
+    .container .box{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .container .prompt input,
+    .container .prompt button{
+        height: 100%;
+    }
+}
+.images div{
+    height: 200px;
+    width: 200px;
+    border-radius: 9px;
+    background-color: #292c31;
+    border: 3px solid #36383d;
+}
+.images div img{
+    width: 100%;
+}
